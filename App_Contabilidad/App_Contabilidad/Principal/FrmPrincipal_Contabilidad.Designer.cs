@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPrincipal_Contabilidad));
             this.PnlArribaContabilidad = new System.Windows.Forms.Panel();
             this.MnuPrincipalContabilidad = new System.Windows.Forms.MenuStrip();
             this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -47,9 +46,6 @@
             this.cuentaBancariaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.BtnMaximizar = new Guna.UI2.WinForms.Guna2Button();
-            this.BtnCerrar = new Guna.UI2.WinForms.Guna2Button();
-            this.BtnMinimizar = new Guna.UI2.WinForms.Guna2Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.PnlAbajoContabilidad = new System.Windows.Forms.Panel();
@@ -57,7 +53,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.PnlArribaContabilidad.SuspendLayout();
             this.MnuPrincipalContabilidad.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // PnlArribaContabilidad
@@ -91,33 +86,33 @@
             this.ayudaToolStripMenuItem});
             this.MnuPrincipalContabilidad.Location = new System.Drawing.Point(21, 58);
             this.MnuPrincipalContabilidad.Name = "MnuPrincipalContabilidad";
-            this.MnuPrincipalContabilidad.Size = new System.Drawing.Size(857, 29);
+            this.MnuPrincipalContabilidad.Size = new System.Drawing.Size(1037, 32);
             this.MnuPrincipalContabilidad.TabIndex = 9;
             this.MnuPrincipalContabilidad.Text = "menuStrip1";
             // 
             // archivoToolStripMenuItem
             // 
             this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
-            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(95, 25);
+            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(95, 28);
             this.archivoToolStripMenuItem.Text = "Archivo";
             // 
             // catalogoToolStripMenuItem
             // 
             this.catalogoToolStripMenuItem.Name = "catalogoToolStripMenuItem";
-            this.catalogoToolStripMenuItem.Size = new System.Drawing.Size(111, 25);
+            this.catalogoToolStripMenuItem.Size = new System.Drawing.Size(111, 28);
             this.catalogoToolStripMenuItem.Text = "Catalogo";
             // 
             // comprobantesToolStripMenuItem
             // 
             this.comprobantesToolStripMenuItem.Name = "comprobantesToolStripMenuItem";
-            this.comprobantesToolStripMenuItem.Size = new System.Drawing.Size(160, 25);
+            this.comprobantesToolStripMenuItem.Size = new System.Drawing.Size(160, 28);
             this.comprobantesToolStripMenuItem.Text = "Comprobantes";
             // 
             // reportesToolStripMenuItem
             // 
             this.reportesToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
-            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(104, 25);
+            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(104, 28);
             this.reportesToolStripMenuItem.Text = "Reportes";
             // 
             // herramientasToolStripMenuItem
@@ -126,7 +121,7 @@
             this.conciliacionBancariaToolStripMenuItem});
             this.herramientasToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.herramientasToolStripMenuItem.Name = "herramientasToolStripMenuItem";
-            this.herramientasToolStripMenuItem.Size = new System.Drawing.Size(141, 25);
+            this.herramientasToolStripMenuItem.Size = new System.Drawing.Size(141, 28);
             this.herramientasToolStripMenuItem.Text = "Herramientas";
             // 
             // conciliacionBancariaToolStripMenuItem
@@ -145,7 +140,7 @@
             this.cuentaBancariaToolStripMenuItem});
             this.configuracionToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.configuracionToolStripMenuItem.Name = "configuracionToolStripMenuItem";
-            this.configuracionToolStripMenuItem.Size = new System.Drawing.Size(151, 25);
+            this.configuracionToolStripMenuItem.Size = new System.Drawing.Size(151, 28);
             this.configuracionToolStripMenuItem.Text = "Configuracion";
             // 
             // periodoToolStripMenuItem
@@ -154,118 +149,62 @@
             this.anualToolStripMenuItem,
             this.mensualToolStripMenuItem});
             this.periodoToolStripMenuItem.Name = "periodoToolStripMenuItem";
-            this.periodoToolStripMenuItem.Size = new System.Drawing.Size(262, 34);
+            this.periodoToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.periodoToolStripMenuItem.Text = "Periodo";
+            this.periodoToolStripMenuItem.Click += new System.EventHandler(this.periodoToolStripMenuItem_Click);
             // 
             // anualToolStripMenuItem
             // 
             this.anualToolStripMenuItem.Name = "anualToolStripMenuItem";
-            this.anualToolStripMenuItem.Size = new System.Drawing.Size(183, 34);
+            this.anualToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.anualToolStripMenuItem.Text = "Anual";
             this.anualToolStripMenuItem.Click += new System.EventHandler(this.anualToolStripMenuItem_Click);
             // 
             // mensualToolStripMenuItem
             // 
             this.mensualToolStripMenuItem.Name = "mensualToolStripMenuItem";
-            this.mensualToolStripMenuItem.Size = new System.Drawing.Size(183, 34);
+            this.mensualToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.mensualToolStripMenuItem.Text = "Mensual";
             this.mensualToolStripMenuItem.Click += new System.EventHandler(this.mensualToolStripMenuItem_Click);
             // 
             // monedaToolStripMenuItem
             // 
             this.monedaToolStripMenuItem.Name = "monedaToolStripMenuItem";
-            this.monedaToolStripMenuItem.Size = new System.Drawing.Size(262, 34);
+            this.monedaToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.monedaToolStripMenuItem.Text = "Moneda";
             // 
             // activoPPPToolStripMenuItem
             // 
             this.activoPPPToolStripMenuItem.Name = "activoPPPToolStripMenuItem";
-            this.activoPPPToolStripMenuItem.Size = new System.Drawing.Size(262, 34);
+            this.activoPPPToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.activoPPPToolStripMenuItem.Text = "Activo PPP";
             // 
             // tasaDeCambioToolStripMenuItem
             // 
             this.tasaDeCambioToolStripMenuItem.Name = "tasaDeCambioToolStripMenuItem";
-            this.tasaDeCambioToolStripMenuItem.Size = new System.Drawing.Size(262, 34);
+            this.tasaDeCambioToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.tasaDeCambioToolStripMenuItem.Text = "Tasa de cambio";
             // 
             // cuentaBancariaToolStripMenuItem
             // 
             this.cuentaBancariaToolStripMenuItem.Name = "cuentaBancariaToolStripMenuItem";
-            this.cuentaBancariaToolStripMenuItem.Size = new System.Drawing.Size(262, 34);
+            this.cuentaBancariaToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.cuentaBancariaToolStripMenuItem.Text = "Cuenta bancaria";
             // 
             // ayudaToolStripMenuItem
             // 
             this.ayudaToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.ayudaToolStripMenuItem.Name = "ayudaToolStripMenuItem";
-            this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(87, 25);
+            this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(87, 28);
             this.ayudaToolStripMenuItem.Text = "Ayuda";
             // 
             // panel1
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.Controls.Add(this.BtnMaximizar);
-            this.panel1.Controls.Add(this.BtnCerrar);
-            this.panel1.Controls.Add(this.BtnMinimizar);
             this.panel1.Location = new System.Drawing.Point(1177, 5);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(140, 39);
             this.panel1.TabIndex = 10;
-            // 
-            // BtnMaximizar
-            // 
-            this.BtnMaximizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
-            this.BtnMaximizar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.BtnMaximizar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.BtnMaximizar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.BtnMaximizar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.BtnMaximizar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
-            this.BtnMaximizar.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.BtnMaximizar.ForeColor = System.Drawing.Color.White;
-            this.BtnMaximizar.Image = ((System.Drawing.Image)(resources.GetObject("BtnMaximizar.Image")));
-            this.BtnMaximizar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.BtnMaximizar.Location = new System.Drawing.Point(47, 3);
-            this.BtnMaximizar.Name = "BtnMaximizar";
-            this.BtnMaximizar.Size = new System.Drawing.Size(38, 28);
-            this.BtnMaximizar.TabIndex = 11;
-            this.BtnMaximizar.Click += new System.EventHandler(this.BtnMaximizar_Click);
-            // 
-            // BtnCerrar
-            // 
-            this.BtnCerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
-            this.BtnCerrar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.BtnCerrar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.BtnCerrar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.BtnCerrar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.BtnCerrar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
-            this.BtnCerrar.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.BtnCerrar.ForeColor = System.Drawing.Color.White;
-            this.BtnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("BtnCerrar.Image")));
-            this.BtnCerrar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.BtnCerrar.Location = new System.Drawing.Point(91, 3);
-            this.BtnCerrar.Name = "BtnCerrar";
-            this.BtnCerrar.Size = new System.Drawing.Size(38, 28);
-            this.BtnCerrar.TabIndex = 1;
-            this.BtnCerrar.Click += new System.EventHandler(this.BtnCerrar_Click);
-            // 
-            // BtnMinimizar
-            // 
-            this.BtnMinimizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
-            this.BtnMinimizar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.BtnMinimizar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.BtnMinimizar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.BtnMinimizar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.BtnMinimizar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
-            this.BtnMinimizar.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.BtnMinimizar.ForeColor = System.Drawing.Color.White;
-            this.BtnMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("BtnMinimizar.Image")));
-            this.BtnMinimizar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.BtnMinimizar.Location = new System.Drawing.Point(3, 3);
-            this.BtnMinimizar.Name = "BtnMinimizar";
-            this.BtnMinimizar.Size = new System.Drawing.Size(38, 28);
-            this.BtnMinimizar.TabIndex = 9;
-            this.BtnMinimizar.Click += new System.EventHandler(this.BtnMinimizar_Click);
             // 
             // label3
             // 
@@ -334,7 +273,6 @@
             this.PnlArribaContabilidad.PerformLayout();
             this.MnuPrincipalContabilidad.ResumeLayout(false);
             this.MnuPrincipalContabilidad.PerformLayout();
-            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -342,8 +280,6 @@
         #endregion
         private System.Windows.Forms.Panel PnlArribaContabilidad;
         private System.Windows.Forms.Panel panel1;
-        private Guna.UI2.WinForms.Guna2Button BtnCerrar;
-        private Guna.UI2.WinForms.Guna2Button BtnMinimizar;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel PnlAbajoContabilidad;
@@ -365,6 +301,5 @@
         private System.Windows.Forms.ToolStripMenuItem cuentaBancariaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ayudaToolStripMenuItem;
         private System.Windows.Forms.Panel panel2;
-        private Guna.UI2.WinForms.Guna2Button BtnMaximizar;
     }
 }

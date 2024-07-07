@@ -191,5 +191,10 @@ namespace App_Contabilidad.Principal
         {
             FormularioHijo(new FrmPeriodo_CRUD());
         }
+
+        private void periodoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

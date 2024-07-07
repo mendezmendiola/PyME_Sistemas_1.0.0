@@ -14,7 +14,7 @@ namespace Entity.Periodo
         private string _Periodo;
         private DateTime _FechaInicioPeriodo;
         private DateTime _FechaFinalPeriodo;
-        private bool _EstadoPeriodo;
+        private string _EstadoPeriodo;
         private DateTime _FechaInicioContabilidad;
         private DateTime _FechaInicioVencimiento;
         private DateTime _FechaFinalContabilidad;
@@ -26,13 +26,12 @@ namespace Entity.Periodo
         private string _mensajeError, _valorScalar;
         private DataTable _dtResultados;
 
-
         #region Atributos Publicos
         public int IDPeriodo { get => _IDPeriodo; set => _IDPeriodo = value; }
         public string Periodo { get => _Periodo; set => _Periodo = value; }
         public DateTime FechaInicioPeriodo { get => _FechaInicioPeriodo; set => _FechaInicioPeriodo = value; }
         public DateTime FechaFinalPeriodo { get => _FechaFinalPeriodo; set => _FechaFinalPeriodo = value; }
-        public bool EstadoPeriodo { get => _EstadoPeriodo; set => _EstadoPeriodo = value; }
+        public string EstadoPeriodo { get => _EstadoPeriodo; set => _EstadoPeriodo = value; }
         public DateTime FechaInicioContabilidad { get => _FechaInicioContabilidad; set => _FechaInicioContabilidad = value; }
         public DateTime FechaInicioVencimiento { get => _FechaInicioVencimiento; set => _FechaInicioVencimiento = value; }
         public DateTime FechaFinalContabilidad { get => _FechaFinalContabilidad; set => _FechaFinalContabilidad = value; }

@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Entity.Periodo;
 using DAL.DataBase;
+using System.Globalization;
 
 
 namespace BLL.Periodo
@@ -40,14 +41,14 @@ namespace BLL.Periodo
                 Scalar = true
             };
             objDatBase.DtParametros.Rows.Add(@"@Periodo", 17, ObjPeriodo.Periodo);
-            objDatBase.DtParametros.Rows.Add(@"@FechaInicioPeriodo", 13, ObjPeriodo.FechaInicioPeriodo);
-            objDatBase.DtParametros.Rows.Add(@"@FechaFinalPeriodo", 13, ObjPeriodo.FechaFinalPeriodo);
-            objDatBase.DtParametros.Rows.Add(@"@EstadoPeriodo", 1, ObjPeriodo.EstadoPeriodo);
-            objDatBase.DtParametros.Rows.Add(@"@FechaInicioContabilidad", 13, ObjPeriodo.FechaInicioContabilidad);
-            objDatBase.DtParametros.Rows.Add(@"@FechaInicioVencimiento", 13, ObjPeriodo.FechaInicioVencimiento);
-            objDatBase.DtParametros.Rows.Add(@"@FechaFinalContabilidad", 13, ObjPeriodo.FechaFinalContabilidad);
-            objDatBase.DtParametros.Rows.Add(@"@FechaFinalVencimiento", 13, ObjPeriodo.FechaFinalVencimiento);
-            objDatBase.DtParametros.Rows.Add(@"@FechaCreacion", 12, ObjPeriodo);
+            //objDatBase.DtParametros.Rows.Add(@"@FechaInicioPeriodo", 13, ObjPeriodo.FechaInicioPeriodo);
+            //objDatBase.DtParametros.Rows.Add(@"@FechaFinalPeriodo", 13, ObjPeriodo.FechaFinalPeriodo);
+            //objDatBase.DtParametros.Rows.Add(@"@EstadoPeriodo", 17, ObjPeriodo.EstadoPeriodo);
+            //objDatBase.DtParametros.Rows.Add(@"@FechaInicioContabilidad", 13, ObjPeriodo.FechaInicioContabilidad);
+            //objDatBase.DtParametros.Rows.Add(@"@FechaInicioVencimiento", 13, ObjPeriodo.FechaInicioVencimiento);
+            //objDatBase.DtParametros.Rows.Add(@"@FechaFinalContabilidad", 13, ObjPeriodo.FechaFinalContabilidad);
+            //objDatBase.DtParametros.Rows.Add(@"@FechaFinalVencimiento", 13, ObjPeriodo.FechaFinalVencimiento);
+            //objDatBase.DtParametros.Rows.Add(@"@FechaCreacion", 13, ObjPeriodo);
 
             Ejecutar(ref ObjPeriodo);
         }
@@ -77,12 +78,12 @@ namespace BLL.Periodo
             objDatBase.DtParametros.Rows.Add(@"@Periodo", 17, ObjPeriodo.Periodo);
             objDatBase.DtParametros.Rows.Add(@"@FechaInicioPeriodo", 13, ObjPeriodo.FechaInicioPeriodo);
             objDatBase.DtParametros.Rows.Add(@"@FechaFinalPeriodo", 13, ObjPeriodo.FechaFinalPeriodo);
-            objDatBase.DtParametros.Rows.Add(@"@EstadoPeriodo", 1, ObjPeriodo.EstadoPeriodo);
+            objDatBase.DtParametros.Rows.Add(@"@EstadoPeriodo", 17, ObjPeriodo.EstadoPeriodo);
             objDatBase.DtParametros.Rows.Add(@"@FechaInicioContabilidad", 13, ObjPeriodo.FechaInicioContabilidad);
             objDatBase.DtParametros.Rows.Add(@"@FechaInicioVencimiento", 13, ObjPeriodo.FechaInicioVencimiento);
             objDatBase.DtParametros.Rows.Add(@"@FechaFinalContabilidad", 13, ObjPeriodo.FechaFinalContabilidad);
             objDatBase.DtParametros.Rows.Add(@"@FechaFinalVencimiento", 13, ObjPeriodo.FechaFinalVencimiento);
-            objDatBase.DtParametros.Rows.Add(@"@FechaCreacion", 12, ObjPeriodo.FechaCreacion);
+            objDatBase.DtParametros.Rows.Add(@"@FechaCreacion", 13, ObjPeriodo.FechaCreacion);
 
             Ejecutar(ref ObjPeriodo);
         }
@@ -118,12 +119,14 @@ namespace BLL.Periodo
                     {
                         foreach (DataRow item in ObjPerido.DtResultados.Rows)
                         {
-                            ObjPerido.IDPeriodo = Convert.ToInt32(item["IDPeriodo"].ToString());
-                            DateTime dateTime = Convert.ToDateTime(item["FechaInicioPeriodo"].ToString());
-                            ObjPerido.FechaInicioPeriodo = dateTime;
+                            //ObjPerido.IDPeriodo = Convert.ToInt32(item["IDPeriodo"].ToString());
+                            //String dateTime  = item["FechaInicioPeriodo"].ToString();
+                            //DateTime X = DateTime.Parse(item["FechaInicioPeriodo"].ToString(), CultureInfo.InvariantCulture);                            //ObjPerido.FechaInicioPeriodo = dateTime;
+
+                            //ObjPerido.FechaInicioPeriodo = Convert.ToDateTime(item["FechaInicioPeriodo"].ToString());
                             //ObjPerido.FechaFinalPeriodo = Convert.ToDateTime(item["FechaFinalPeriodo"].ToString());
                             ObjPerido.Periodo = item["Periodo"].ToString();
-                            ObjPerido.EstadoPeriodo = Convert.ToBoolean(item["EstadoPeriodo"].ToString());
+                            //ObjPerido.EstadoPeriodo = item["EstadoPeriodo"].ToString();
                             //ObjPerido.FechaInicioContabilidad = Convert.ToDateTime(item["FechaInicioContabilidad"].ToString());
                             //ObjPerido.FechaInicioVencimiento = Convert.ToDateTime(item["FechaInicioVencimiento"].ToString());
                             //ObjPerido.FechaFinalContabilidad = Convert.ToDateTime(item["FechaFinalContabilidad"].ToString());

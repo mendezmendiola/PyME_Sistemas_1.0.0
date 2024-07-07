@@ -26,7 +26,7 @@ namespace App_Contabilidad.Catalogos
 
         private void CargarListaPeriodo()
         {
-            ObjPeriodo = new ClsPeriodo();
+            ObjPeriodo = new ClsPeriodo();          
             ObjPeriodoLn.Index(ref ObjPeriodo);
             if (ObjPeriodo.MensajeError == null)
             {
@@ -35,7 +35,7 @@ namespace App_Contabilidad.Catalogos
             }
             else
             {
-               // System.Windows.Forms.MessageBox.Show(ObjPeriodo.MensajeError, "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+               System.Windows.Forms.MessageBox.Show(ObjPeriodo.MensajeError, "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }

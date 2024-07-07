@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.guna2NotificationPaint1 = new Guna.UI2.WinForms.Guna2NotificationPaint(this.components);
             this.GpbPeriodo = new System.Windows.Forms.GroupBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -70,7 +68,7 @@
             this.GpbPeriodo.Controls.Add(this.TxtPeriodo);
             this.GpbPeriodo.Location = new System.Drawing.Point(21, 33);
             this.GpbPeriodo.Name = "GpbPeriodo";
-            this.GpbPeriodo.Size = new System.Drawing.Size(369, 229);
+            this.GpbPeriodo.Size = new System.Drawing.Size(378, 229);
             this.GpbPeriodo.TabIndex = 17;
             this.GpbPeriodo.TabStop = false;
             this.GpbPeriodo.Text = "Periodo Contable:";
@@ -270,7 +268,7 @@
             // 
             // BtnEliminar
             // 
-            this.BtnEliminar.Location = new System.Drawing.Point(528, 214);
+            this.BtnEliminar.Location = new System.Drawing.Point(504, 211);
             this.BtnEliminar.Name = "BtnEliminar";
             this.BtnEliminar.Size = new System.Drawing.Size(124, 48);
             this.BtnEliminar.TabIndex = 22;
@@ -279,16 +277,17 @@
             // 
             // BtnGuardar
             // 
-            this.BtnGuardar.Location = new System.Drawing.Point(528, 106);
+            this.BtnGuardar.Location = new System.Drawing.Point(504, 103);
             this.BtnGuardar.Name = "BtnGuardar";
             this.BtnGuardar.Size = new System.Drawing.Size(124, 48);
             this.BtnGuardar.TabIndex = 19;
             this.BtnGuardar.Text = "Guardar";
             this.BtnGuardar.UseVisualStyleBackColor = true;
+            this.BtnGuardar.Click += new System.EventHandler(this.BtnGuardar_Click);
             // 
             // BtnModificar
             // 
-            this.BtnModificar.Location = new System.Drawing.Point(528, 160);
+            this.BtnModificar.Location = new System.Drawing.Point(504, 157);
             this.BtnModificar.Name = "BtnModificar";
             this.BtnModificar.Size = new System.Drawing.Size(124, 48);
             this.BtnModificar.TabIndex = 20;
@@ -319,7 +318,6 @@
         }
 
         #endregion
-        private Guna.UI2.WinForms.Guna2NotificationPaint guna2NotificationPaint1;
         private System.Windows.Forms.GroupBox GpbPeriodo;
         private System.Windows.Forms.DateTimePicker DtpFechaInicialPeriodo;
         private System.Windows.Forms.TextBox TxtPeriodo;
